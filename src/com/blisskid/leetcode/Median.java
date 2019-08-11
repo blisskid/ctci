@@ -25,7 +25,14 @@ public class Median {
 
     public static void main(String[] args) {
         Median median = new Median();
-        System.out.println(median.findMedianSortedArrays(new int[]{2,4,5}, new int[]{}));
+    }
+
+    private void change(AbPojo abPojo) {
+        abPojo.setA(10);
+    }
+
+    private void change(int[] arr) {
+        arr[0] = 100;
     }
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
@@ -86,5 +93,18 @@ public class Median {
             }
         }
         return 0.0;
+    }
+}
+
+class AbPojo {
+    private int a = 0;
+    private int b = 0;
+
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
     }
 }
