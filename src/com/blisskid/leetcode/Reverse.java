@@ -13,6 +13,8 @@ public class Reverse {
             res = res * 10 + x % 10;
             x = x / 10;
         }
+        String s = new String("fsdfds");
+        s.trim();
         return sign * res;
     }
 
