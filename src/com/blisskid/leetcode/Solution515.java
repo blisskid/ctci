@@ -51,6 +51,8 @@ public class Solution515 {
             print(node.left, level);
             print(node.right, level);
 
+            List[] list = new List[2];
+
         }
     }
 }
