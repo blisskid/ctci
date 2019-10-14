@@ -2,13 +2,20 @@ package com.blisskid.leetcode;
 
 public class Solution851 {
 
+    public static void main(String[] args) {
+        Solution851 solution = new Solution851();
+        int[][] richer = {{1,0},{2,1},{3,1},{3,7},{4,3},{5,3},{6,3}};
+        int[] quiet = {3,2,5,4,6,1,7,0};
+        System.out.println(solution.loudAndRich(richer, quiet));
+    }
+
     int[] resultArr = null;
 
     public int[] loudAndRich(int[][] richer, int[] quiet) {
         //listArr to store richer than the key's person
         int size = quiet.length;
 
-        int[] resultArr = new int[size];
+        resultArr = new int[size];
         for (int i = 0; i < size; i++) {
             resultArr[i] = -1;
         }
