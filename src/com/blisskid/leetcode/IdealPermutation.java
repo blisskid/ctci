@@ -2,7 +2,7 @@ package com.blisskid.leetcode;
 
 public class IdealPermutation {
 
-    public boolean isIdealPermutation(int[] A) {
+    public boolean isIdealPermutationA(int[] A) {
         //if (A == null) return false;
         for (int i = 0; i < A.length; i++) {
             for (int j = i + 2; j < A.length; j++) {
@@ -13,4 +13,13 @@ public class IdealPermutation {
         }
         return true;
     }
+
+    public boolean isIdealPermutation(int[] A) {
+        //if (A == null) return false;
+        for (int i = 0; i < A.length; i++) {
+
+        }
+        return true;
+    }
+
 }
