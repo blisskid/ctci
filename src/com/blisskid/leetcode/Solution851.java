@@ -1,6 +1,14 @@
 package com.blisskid.leetcode;
 
-class Solution851 {
+public class Solution851 {
+
+    public static void main(String[] args) {
+        Solution851 solution = new Solution851();
+        int[][] richer = {{1,0},{2,1},{3,1},{3,7},{4,3},{5,3},{6,3}};
+        int[] quiet = {3,2,5,4,6,1,7,0};
+        System.out.println(solution.loudAndRich(richer, quiet));
+    }
+
     int[] resultArr = null;
 
     public int[] loudAndRich(int[][] richer, int[] quiet) {
