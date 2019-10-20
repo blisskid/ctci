@@ -1,66 +1,59 @@
 package com.blisskid.datastructure;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 public class Graph {
 
-    private class Node {
-        private Integer data;
-        private List<Node> children;
-
-        Node(Integer data) {
-            this.data = data;
-            this.children = new ArrayList<>();
-        }
-
-        public void addChild(Node node) {
-            this.children.add(node);
-        }
-
-        public boolean hasChild() {
-            return this.children.size() == 0;
-        }
-    }
-
-    private Node root = null;
-
-    public Graph createGraph(int[][] richer, int[] quiet) {
+    public static void main(String[] args) {
         Graph graph = new Graph();
-        Queue<Node> queue = new LinkedList<>();
+        graph.addVertex('A');   //0
+        graph.addVertex('B');   //1
+        graph.addVertex('C');
+        graph.addVertex('D');
+        graph.addVertex('E');
 
-
-        //queue.add();
-
-        for (int i = 0; i < richer.length; i++) {
-            if (richer[i][1] == 0) {
-                if (graph.root == null) {
-                    graph.root = new Node(richer[i][1]);
-                }
-                graph.root.addChild(new Node(richer[i][0]));
-            }
-        }
-
-        /*
-        for (int j = 1; j < quiet.length; j++) {
-            for (int i = 0; i < richer.length; i++) {
-                if (richer[i][1] == j) {
-                    if (graph.root == null) {
-                        graph.root = new Node(richer[i][1]);
-                    }
-                    graph.root.addChild(new Node(richer[i][0]));
-                }
-            }
-        }
-    */
-
-
-        return graph;
+        graph.addEdge(0, 1); //AB
+        graph.addEdge(1, 2); //BC
+        graph.addEdge(0, 3); //AD
+        graph.addEdge(3, 4); //DE
     }
 
-    public void traverse(Graph graph) {
+    private final int MAX_VERTS = 20;
+    private Vertex vertexList[];
+    private int adjMat[][];
+    //current number of vertices
+    private int nVerts;
+    private StackX theStack;
 
+    public Graph() {
+        //adjacency matrix;
+        vertexList = new Vertex[MAX_VERTS];
+        adjMat = new int[MAX_VERTS][MAX_VERTS];
+        nVerts = 0;
+        for(int j=0; j<MAX_VERTS; j++) // set adjacency
+            for(int k=0; k<MAX_VERTS; k++) // matrix to 0
+                adjMat[j][k] = 0;
+    }
+
+
+    public void addVertex(char lab)    // argument is label
+    {
+        vertexList[nVerts++] = new Vertex(lab);
+    }
+
+    public void addEdge(int start, int end)
+    {
+        adjMat[start][end] = 1; adjMat[end][start] = 1;
+    }
+    public void displayVertex(int v) {
+        System.out.print(vertexList[v].label);
+    }
+
+    public void dfs() {
+        vertexList[0].visited = true;
+        displayVertex(0);
+        theStack.push(0);
+
+        while (!theStack.isEmpty()) {
+
+        }
     }
 }

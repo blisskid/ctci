@@ -1,4 +1,4 @@
-package com.blisskid;
+package com.blisskid.basic;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.blisskid;
+package com.blisskid.basic;
 
 
 import java.util.Arrays;
@@ -19,6 +19,10 @@ public class Sort {
         Float f = 9329329f;
 
 
+    }
+
+    void bubbleSort(int[] array) {
+        
     }
 
     void mergesort(int[] array) {
