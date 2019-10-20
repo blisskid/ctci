@@ -31,6 +31,7 @@ public class Graph {
         Graph graph = new Graph();
         Queue<Node> queue = new LinkedList<>();
 
+
         //queue.add();
 
         for (int i = 0; i < richer.length; i++) {
