@@ -98,6 +98,7 @@ class Rex {
         } else {
             return false;
         }
+        return true;
     }
 
     public boolean isMatch2(String s, String p) {

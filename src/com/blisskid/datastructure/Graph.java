@@ -14,6 +14,7 @@ public class Graph {
         graph.addEdge(1, 2); //BC
         graph.addEdge(0, 3); //AD
         graph.addEdge(3, 4); //DE
+        graph.dfs();
     }
 
     private final int MAX_VERTS = 20;
@@ -28,6 +29,7 @@ public class Graph {
         vertexList = new Vertex[MAX_VERTS];
         adjMat = new int[MAX_VERTS][MAX_VERTS];
         nVerts = 0;
+        theStack = new StackX();
         for(int j=0; j<MAX_VERTS; j++) // set adjacency
             for(int k=0; k<MAX_VERTS; k++) // matrix to 0
                 adjMat[j][k] = 0;
@@ -53,7 +55,27 @@ public class Graph {
         theStack.push(0);
 
         while (!theStack.isEmpty()) {
-
+            int v = getAdjUnvisitedVertex(theStack.peek());
+            if (v == -1) {
+                theStack.pop();
+            } else {
+                vertexList[v].visited = true;
+                displayVertex(v);
+                theStack.push(v);
+            }
         }
+
+        for (int j = 0; j < nVerts; j++) {
+            vertexList[j].visited = false;
+        }
+    }
+
+    public int getAdjUnvisitedVertex(int v) {
+        for (int j = 0; j < nVerts; j++) {
+            if (adjMat[v][j] == 1 && vertexList[j].visited == false) {
+                return j;
+            }
+        }
+        return -1;
     }
 }
