@@ -1,4 +1,4 @@
-package com.blisskid.leetcode;
+package com.blisskid.leetcode.other;
 
 class Rex {
     enum Result {

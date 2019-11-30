@@ -1,4 +1,4 @@
-package com.blisskid.leetcode;
+package com.blisskid.leetcode.other;
 
 /*
 There are two sorted arrays nums1 and nums2 of size m and n respectively.

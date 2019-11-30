@@ -1,4 +1,4 @@
-package com.blisskid.leetcode;
+package com.blisskid.leetcode.other;
 
 public class Solution867 {
     public static void main(String[] args) {

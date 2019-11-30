@@ -1,7 +1,4 @@
-package com.blisskid.leetcode;
-
-import java.security.InvalidParameterException;
-import java.util.ArrayList;
+package com.blisskid.leetcode.other;
 
 public class ZigZag {
 

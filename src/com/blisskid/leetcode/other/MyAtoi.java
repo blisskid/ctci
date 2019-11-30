@@ -1,4 +1,4 @@
-package com.blisskid.leetcode;
+package com.blisskid.leetcode.other;
 
 public class MyAtoi {
     public static void main(String[] args) {

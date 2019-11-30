@@ -1,4 +1,4 @@
-package com.blisskid.leetcode;
+package com.blisskid.leetcode.other;
 
 import java.util.ArrayList;
 import java.util.HashSet;
