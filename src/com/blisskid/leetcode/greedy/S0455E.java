@@ -30,10 +30,10 @@ import java.util.Arrays;
  *
  */
 
-public class S0455 {
+public class S0455E {
 
     public static void main(String[] args) {
-        S0455 s0455 = new S0455();
+        S0455E s0455 = new S0455E();
         int[] g = {1, 2, 3};
         int[] s = {1, 1};
         System.out.println(s0455.findContentChildren(g, s));
