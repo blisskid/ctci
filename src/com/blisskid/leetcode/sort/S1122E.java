@@ -1,5 +1,5 @@
 package com.blisskid.leetcode.sort;
-
+import java.util.*;
 /**
  * Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.
  *
@@ -19,11 +19,61 @@ package com.blisskid.leetcode.sort;
  * 0 <= arr1[i], arr2[i] <= 1000
  * Each arr2[i] is distinct.
  * Each arr2[i] is in arr1.
- *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/relative-sort-array
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
 public class S1122E {
+
+    public static void main(String[] args) {
+        S1122E s = new S1122E();
+        int[] arr1 = {2,3,1,3,2,4,6,7,9,2,19};
+        int[] arr2 = {2,1,4,3,9,6};
+        int[] result = s.relativeSortArray(arr1, arr2);
+        System.out.println(result);
+    }
+
+    public int[] relativeSortArray(int[] arr1, int[] arr2) {
+        Map<Integer, List<Integer>> map = new LinkedHashMap<Integer, List<Integer>>();
+        for (int i = 0; i < arr2.length; i++) {
+            map.put(arr2[i], new ArrayList<Integer>());
+        }
+        //in arr1 not in arr2
+        List<Integer> otherList = new ArrayList<Integer>();
+
+        for (int i = 0; i < arr1.length; i++) {
+            List<Integer> list = map.get(arr1[i]);
+            if (list != null)
+                list.add(arr1[i]);
+            else {
+                otherList.add(arr1[i]);
+            }
+        }
+
+        otherList.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                if (o1 > o2) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+        });
+
+        List<Integer> resultList = new ArrayList<Integer>();
+
+        for (Map.Entry<Integer, List<Integer>> entry : map.entrySet()) {
+            List<Integer> list = entry.getValue();
+            for (Integer ele : list) {
+                resultList.add(ele);
+            }
+        }
+        resultList.addAll(otherList);
+        Integer[] resultArray = new Integer[resultList.size()];
+        resultList.toArray(resultArray);
+        int[] result = new int[resultList.size()];
+        for (int i = 0; i < resultList.size(); i++) {
+            result[i] = resultArray[i];
+        }
+        return result;
+    }
 }
