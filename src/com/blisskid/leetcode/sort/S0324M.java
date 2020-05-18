@@ -28,7 +28,7 @@ public class S0324M {
         int[] nums = new int[]{2,1,1,2,1,3,3,3,1,3,1,3,2};
         int[] nums4 = new int[]{1};
 
-        s.wiggleSort(nums4);
+        s.wiggleSort(nums);
 //        System.out.println(s.quickSelect(nums1, 0, nums1.length - 1, nums1.length / 2));
 //        System.out.println(Arrays.toString(nums1));
     }
