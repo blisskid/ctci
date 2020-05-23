@@ -40,6 +40,7 @@ public class S0455E {
     }
 
     public int findContentChildren(int[] g, int[] s) {
+
         int num = 0;
         int gSize = g.length;
         int sSize = s.length;
