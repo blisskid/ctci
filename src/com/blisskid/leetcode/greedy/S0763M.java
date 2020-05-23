@@ -21,7 +21,11 @@ import java.util.*;
 
 public class S0763M {
 
-    private class LetterObj {
+    public static void main(String[] args) {
+        new S0763M().partitionLabels("ababcbacadefegdehijhklij");
+    }
+
+    private class LetterObj implements Comparable<LetterObj> {
         public int startIndex = 0;
         public int endIndex = 1000;
         public Integer length = 0;
@@ -29,8 +33,13 @@ public class S0763M {
             length = endIndex - startIndex + 1;
         }
 
-        public int compareTo(LetterObj o1, LetterObj o2) {
-            return o2.length.compareTo(o1.length);
+        @Override
+        public int compareTo(LetterObj o) {
+            if (null == o || o.length == 0) {
+                return 1;
+            } else {
+                return o.length.compareTo(this.length);
+            }
         }
     }
 
@@ -80,7 +89,14 @@ public class S0763M {
                 }
             }
         }
-        return null;
+
+        List<Integer> result = new ArrayList<>();
+        for (LetterObj letter : letters) {
+            if (letter != null) {
+                result.add(letter.length);
+            }
+        }
+        return result;
     }
 
     /*
