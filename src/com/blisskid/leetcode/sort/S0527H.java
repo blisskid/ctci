@@ -16,9 +16,6 @@ package com.blisskid.leetcode.sort;
  * The words consist of lowercase English letters only.
  * The return answers should be in the same order as the original array.
  *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/word-abbreviation
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
 public class S0527H {

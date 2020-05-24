@@ -22,68 +22,83 @@ import java.util.*;
 public class S0763M {
 
     public static void main(String[] args) {
-        new S0763M().partitionLabels("ababcbacadefegdehijhklij");
+        System.out.println(new S0763M().partitionLabels("eccbbbbdec"));
     }
 
     private class LetterObj implements Comparable<LetterObj> {
-        public int startIndex = 0;
-        public int endIndex = 1000;
-        public Integer length = 0;
+        public int startIndex;
+        public int endIndex;
+        public Integer length;
+        public Boolean removed = false;
         public void calLength() {
             length = endIndex - startIndex + 1;
         }
 
+        LetterObj (int startIndex, int endIndex) {
+            this.startIndex = startIndex;
+            this.endIndex = endIndex;
+            this.calLength();
+        }
+
+        LetterObj () {}
+
         @Override
         public int compareTo(LetterObj o) {
-            if (null == o || o.length == 0) {
+            if (o.length > length) {
                 return 1;
-            } else {
-                return o.length.compareTo(this.length);
-            }
+            } else if (o.length == length)
+                return 0;
+            else
+                return -1;
         }
     }
 
     public List<Integer> partitionLabels(String S) {
         char[] s = S.toCharArray();
-        LetterObj[] letters = new LetterObj[26];
+        Map<Character, LetterObj> letters = new LinkedHashMap<>();
+        //LetterObj[] letters = new LetterObj[26];
         //find the distinct letter
         for (int i = 0; i < s.length; i++) {
-            int index = s[i] - 'a';
-            if (letters[index] == null) {
-                letters[index] = new LetterObj();
-                letters[index].startIndex = i;
-                letters[index].endIndex = i;
+            if (letters.get(s[i]) == null) {
+                letters.put(s[i], new LetterObj(i, i));
             } else {
-                if (i < letters[index].startIndex) {
-                    letters[index].startIndex = i;
-                    letters[index].calLength();
-                } else if (i > letters[index].endIndex) {
-                    letters[index].endIndex = i;
-                    letters[index].calLength();
+                if (i < letters.get(s[i]).startIndex) {
+                    letters.get(s[i]).startIndex = i;
+                    letters.get(s[i]).calLength();
+                } else if (i > letters.get(s[i]).endIndex) {
+                    letters.get(s[i]).endIndex = i;
+                    letters.get(s[i]).calLength();
                 }
             }
         }
-        Arrays.sort(letters);
-        for (int i = 0; i < letters.length - 1; i++) {
-            if (letters[i] != null) {
-                for (int j = i + 1; j < letters.length; j++) {
-                    if (letters[j] != null) {
-                        if (letters[j].startIndex < letters[i].startIndex) {
-                            if (letters[j].endIndex >= letters[i].startIndex) {
-                                letters[i].startIndex = letters[j].startIndex;
-                                letters[i].calLength();
-                                letters[j] = null;
+        //Arrays.sort(letters);
+        for (Map.Entry<Character, LetterObj> ele : letters.entrySet()) {
+            if (!ele.getValue().removed) {
+                for (Map.Entry<Character, LetterObj> ele1 : letters.entrySet()) {
+                    if (ele1.getKey() != ele.getKey() && !ele1.getValue().removed) {
+                        if (ele1.getValue().startIndex < ele.getValue().startIndex) {
+                            if (ele1.getValue().endIndex >= ele.getValue().startIndex && ele1.getValue().endIndex < ele.getValue().endIndex) {
+                                ele.getValue().startIndex = ele1.getValue().startIndex;
+                                ele.getValue().calLength();
+                                ele1.getValue().removed = true;
+                                //letters.remove(s[j]);
+                            } else if (ele1.getValue().endIndex >= ele.getValue().endIndex) {
+                                ele.getValue().startIndex = ele1.getValue().startIndex;
+                                ele.getValue().endIndex = ele1.getValue().endIndex;
+                                ele.getValue().calLength();
+                                ele1.getValue().removed = true;
+                                //letters.remove(s[j]);
                             }
-                        } else if (letters[j].startIndex >= letters[i].startIndex && letters[j].startIndex <= letters[i].endIndex) {
-                            if (letters[j].endIndex <= letters[i].endIndex) {
-                                letters[j] = null;
+                        } else if (ele1.getValue().startIndex >= ele.getValue().startIndex && ele1.getValue().startIndex <= ele.getValue().endIndex) {
+                            if (ele1.getValue().endIndex <= ele.getValue().endIndex) {
+                                ele1.getValue().removed = true;
+                                //letters.remove(s[j]);
                             } else {
-                                letters[i].endIndex = letters[j].endIndex;
-                                letters[i].calLength();
-                                letters[j] = null;
+                                ele.getValue().endIndex = ele1.getValue().endIndex;
+                                ele.getValue().calLength();
+                                ele1.getValue().removed = true;
+                                //letters.remove(s[j]);
                             }
-                        } else {
-
                         }
                     }
                 }
@@ -91,11 +106,11 @@ public class S0763M {
         }
 
         List<Integer> result = new ArrayList<>();
-        for (LetterObj letter : letters) {
-            if (letter != null) {
-                result.add(letter.length);
-            }
+        for (Map.Entry<Character, LetterObj> letter : letters.entrySet()) {
+            if (!letter.getValue().removed)
+                result.add(letter.getValue().length);
         }
+
         return result;
     }
 
