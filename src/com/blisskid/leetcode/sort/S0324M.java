@@ -28,7 +28,7 @@ public class S0324M {
         int[] nums = new int[]{2,1,1,2,1,3,3,3,1,3,1,3,2};
         int[] nums4 = new int[]{1};
 
-        s.wiggleSort(nums1);
+        s.wiggleSort(nums);
 //        System.out.println(s.quickSelect(nums1, 0, nums1.length - 1, nums1.length / 2));
 //        System.out.println(Arrays.toString(nums1));
     }
@@ -78,22 +78,6 @@ public class S0324M {
 
         System.out.println(Arrays.toString(nums));
         //2: use 3 ways partition to rearrange nums
-        int i = 0, j = 0, k = nums.length - 1;
-        while(j < k){
-            if(nums[j] > mediem){
-                swap(j, k, nums);
-                --k;
-            }
-            else if(nums[j] < mediem){
-                swap(j, i, nums);
-                ++i;
-                ++j;
-            }
-            else{
-                ++j;
-            }
-        }
-        /*
         int[] temp = new int[nums.length];
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -129,7 +113,6 @@ public class S0324M {
             nums[(nums.length - 1 - i) * 2 + 1] = temp[i];
         }
         //nums[nums.length - 1] = temp[nums.length / 2];
-        */
         System.out.println(Arrays.toString(nums));
     }
 
