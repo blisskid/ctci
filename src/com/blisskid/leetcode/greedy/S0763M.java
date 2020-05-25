@@ -21,8 +21,33 @@ import java.util.*;
 
 public class S0763M {
 
+    public List<Integer> partitionLabels(String S) {
+        List<Integer> result = new ArrayList<>();
+
+        int[] letters = new int[26];
+        for (int i = 0; i < S.length(); i++) {
+            letters[S.charAt(i) - 'a'] = i;
+        }
+
+        int start = 0, end = 0, index = 0;
+        while (index < S.length()) {
+            if (letters[S.charAt(index) - 'a'] > end) {
+                end = letters[S.charAt(index) - 'a'];
+            }
+            if (index == end) {
+                result.add(end - start + 1);
+                index++;
+                start = index;
+                continue;
+            }
+            index++;
+        }
+
+        return result;
+    }
+
     public static void main(String[] args) {
-        System.out.println(new S0763M().partitionLabels("eccbbbbdec"));
+        System.out.println(new S0763M().partitionLabels("ababcbacadefegdehijhklij"));
     }
 
     private class LetterObj implements Comparable<LetterObj> {
@@ -53,7 +78,7 @@ public class S0763M {
         }
     }
 
-    public List<Integer> partitionLabels(String S) {
+    public List<Integer> partitionLabels2(String S) {
         char[] s = S.toCharArray();
         Map<Character, LetterObj> letters = new LinkedHashMap<>();
         //LetterObj[] letters = new LetterObj[26];
