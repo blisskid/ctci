@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Median.java" line="20" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="20337216-2ba0-4813-be87-54d263ee58cd" name="Default Changelist" comment="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/AddTwoNum.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/ListNode.class" beforeDir="false" />
@@ -13,191 +13,18 @@
       <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/Palindromic.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/Solution.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/SumNum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0455E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0455E.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0324M.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0324M.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ctci$Main.ic" NAME="Main Coverage Results" MODIFIED="1563095827816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1592706211">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.80" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="10" />
-          <entry key="java" value="5324" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="5324" />
-          <entry key="PLAIN_TEXT" value="10" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="9" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1246056219">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="25" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.4" value="4" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.open.time.8" value="5" />
-          <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="28" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="9" />
-          <entry key="java" value="21541" />
-          <entry key="txt" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="21541" />
-          <entry key="PLAIN_TEXT" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="106" />
-          <entry key="xml" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="106" />
-          <entry key="XML" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/stack/S1249.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0280M.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0324M.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2845">
-              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0527H.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0179M.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1280">
-              <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0455E.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
-              <folding>
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
-                <element signature="e#1074#1075#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ComparableTimSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="261" selection-start-line="261" selection-end-line="261" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0135H.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -206,184 +33,27 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>* &lt;p&gt;</find>
-      <find>addEdge</find>
-      <find>}</find>
-      <find>-</find>
-      <find>theMap</find>
-      <find>treemap</find>
-      <find>theMap.put</find>
-      <find>Integer</find>
-      <find>letters[i]</find>
-      <find>letters[j]</find>
-      <find>letters.get(s[i])</find>
-      <find>letters.get(s[j])</find>
-      <find>letters.get(i)</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>LeetVertex</replace>
-      <replace>{</replace>
-      <replace>}}</replace>
-      <replace>[</replace>
-      <replace>]</replace>
-      <replace>int</replace>
-      <replace>letters.get(s[i])</replace>
-      <replace>letters.get(s[j])</replace>
-      <replace>letters.get(i)</replace>
-      <replace>letters.get(j)</replace>
-      <replace>ele1.getValue()</replace>
-      <replace>ele.getValue()</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Solution.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/LongestSubstring.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Palindromic.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Median.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/MyAtoi.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Reverse.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Palindrome.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/IdealPermutation.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/basic/datastructure/ArrayStack.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/basic/BubbleSort.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/basic/Sort.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/datastructure/Vertex.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/datastructure/MyGraph.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/datastructure/StackX.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Rex.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/datastructure/Queue.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/datastructure/Graph.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/datastructure/LeetVertex.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/datastructure/LeetGraph.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Solution851.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Solution867.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/Solution479.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/S1080.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/S1249.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/stack/S1249.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/stack/S0844.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S1046.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/Heap.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/MinHeap.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S0378.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/Node.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0455.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S179.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S179M.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/bit/S0421.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/bit/S0421M.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/bit/S0411H.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S0882C.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S0882.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/other/S1394.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0135.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0135H.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0455E.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S1122E.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0179M.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0280M.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0324M.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0527H.java" />
-        <option value="$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java" />
-      </list>
-    </option>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
-  </component>
+  <component name="ProjectId" id="1bzGH82KvFZVA1VvpQ2u80bea41" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blisskid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blisskid" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blisskid" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="bit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blisskid" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="greedy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blisskid" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="sort" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ctci" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ctci" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blisskid" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="stack" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590328000596" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571738180167" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.blisskid.leetcode.heap" />
       <recent name="com.blisskid.datastructure" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -403,12 +73,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.S0763M">
-    <configuration name="S0179M" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.blisskid.leetcode.sort.S0179M" />
+    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blisskid.datastructure.Graph" />
       <module name="ctci" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blisskid.leetcode.sort.*" />
+          <option name="PATTERN" value="com.blisskid.datastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Rex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blisskid.leetcode.Rex" />
+      <module name="ctci" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blisskid.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -442,25 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="S1122E" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.blisskid.leetcode.sort.S1122E" />
+    <configuration name="Solution851" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blisskid.leetcode.Solution851" />
       <module name="ctci" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blisskid.leetcode.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="S1394" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.blisskid.leetcode.other.S1394" />
-      <module name="ctci" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.blisskid.leetcode.other.*" />
+          <option name="PATTERN" value="com.blisskid.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -469,9 +139,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.S1394" />
-      <item itemvalue="Application.S1122E" />
-      <item itemvalue="Application.S0179M" />
+      <item itemvalue="Application.Rex" />
+      <item itemvalue="Application.Graph" />
+      <item itemvalue="Application.Solution851" />
       <item itemvalue="Application.S0324M" />
       <item itemvalue="Application.S0763M" />
     </list>
@@ -479,9 +149,9 @@
       <list>
         <item itemvalue="Application.S0763M" />
         <item itemvalue="Application.S0324M" />
-        <item itemvalue="Application.S0179M" />
-        <item itemvalue="Application.S1122E" />
-        <item itemvalue="Application.S1394" />
+        <item itemvalue="Application.Solution851" />
+        <item itemvalue="Application.Graph" />
+        <item itemvalue="Application.Rex" />
       </list>
     </recent_temporary>
   </component>
@@ -581,92 +251,41 @@
       <updated>1571648794650</updated>
     </task>
     <task id="LOCAL-00013" summary="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <created>1571900474290</created>
+      <created>1589775289257</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1571900474290</updated>
+      <updated>1589775289257</updated>
     </task>
     <task id="LOCAL-00014" summary="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <created>1574935838411</created>
+      <created>1590209839191</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1574935838411</updated>
+      <updated>1590209839192</updated>
     </task>
     <task id="LOCAL-00015" summary="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <created>1575127309271</created>
+      <created>1590215784180</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1575127309271</updated>
+      <updated>1590215784180</updated>
     </task>
-    <task id="LOCAL-00016" summary="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <created>1576832980876</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1576832980876</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <created>1587823036994</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1587823036994</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <created>1589381228493</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1589381228493</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <created>1590218292256</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1590218292256</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6170678" visible="true" weight="0.20386267" />
-      <window_info id="Structure" order="1" sideWeight="0.38293216" side_tool="true" weight="0.19241774" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.33828998" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.4178344" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.3299363" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50214595" side_tool="true" weight="0.32833788" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32866243" />
-      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.4985694" weight="0.28280255" />
-      <window_info anchor="right" x="0" y="0" width="310" height="626" id="Documentation" order="0" side_tool="true" weight="0.21030043" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3297568" />
-    </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ii" />
@@ -677,427 +296,21 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Median.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Solution867.java</url>
-          <line>11</line>
-          <properties />
+          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java</url>
+          <line>65</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S0882.java</url>
-          <line>163</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S1122E.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0324M.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java</url>
-          <line>107</line>
-          <properties />
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>theStack.peek()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>stones</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/basic/Sort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/basic/Primes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/datastructure/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Solution867.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Solution479.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/S1080.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/datastructure/LeetVertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Rex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2000">
-          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Solution515.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" selection-start-line="9" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/AddTwoNum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/IdealPermutation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/ListNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/LongestSubstring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Median.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1840">
-          <caret line="98" column="6" selection-start-line="98" selection-start-column="6" selection-end-line="98" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/MyAtoi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/Heap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/MinHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1220">
-          <caret line="65" column="1" selection-start-line="2" selection-end-line="65" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Palindrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Palindromic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Reverse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/datastructure/LeetGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/datastructure/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/datastructure/StackX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/datastructure/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S0882.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/datastructure/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="95" selection-start-line="95" selection-end-line="103" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/S1394.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S0882C.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S1046.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/bit/S0411H.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/other/Solution851.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/heap/S0378.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/bit/S0421M.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="940" column="18" selection-start-line="940" selection-start-column="18" selection-end-line="940" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S1122E.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/stack/S0844.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/stack/S1249.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0179M.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1280">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0135H.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0527H.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0455E.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0280M.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/sort/S0324M.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2845">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="1247" selection-start-line="1247" selection-end-line="1247" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ComparableTimSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="261" selection-start-line="261" selection-end-line="261" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/blisskid/leetcode/greedy/S0763M.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
-          <folding>
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="theStack.peek()" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

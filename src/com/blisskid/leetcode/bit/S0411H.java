@@ -18,9 +18,6 @@ package com.blisskid.leetcode.bit;
  *
  * "apple", ["plain", "amber", "blade"] -> "1p3" (other valid answers include "ap3", "a3e", "2p2", "3le", "3l1").
  *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/minimum-unique-word-abbreviation
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
 public class S0411H {
