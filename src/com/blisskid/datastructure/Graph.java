@@ -4,16 +4,18 @@ public class Graph {
 
     public static void main(String[] args) {
         Graph graph = new Graph();
-        graph.addVertex('A');   //0
-        graph.addVertex('B');   //1
-        graph.addVertex('C');
-        graph.addVertex('D');
-        graph.addVertex('E');
+        graph.addVertex('0');   //0
+        graph.addVertex('1');   //1
+        graph.addVertex('2');
+        graph.addVertex('3');
+        graph.addVertex('4');
+        graph.addVertex('5');
 
-        graph.addEdge(0, 1); //AB
-        graph.addEdge(1, 2); //BC
-        graph.addEdge(0, 3); //AD
-        graph.addEdge(3, 4); //DE
+        graph.addEdge(0, 5);
+        graph.addEdge(0, 3);
+        graph.addEdge(5, 1);
+        graph.addEdge(5, 4);
+        graph.addEdge(1, 2);
         graph.dfs();
         System.out.println();
         graph.bfs();

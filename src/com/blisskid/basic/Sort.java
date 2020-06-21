@@ -1,14 +1,16 @@
 package com.blisskid.basic;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
+import com.blisskid.datastructure.ArrayStack;
+
+import java.util.*;
 
 public class Sort {
 
     private int count = 0;
 
     public static void main(String[] args) {
+        /*
         Sort sortClass = new Sort();
         int[] array = new int[]{1, 22, 41, 7, 10, 54, 3, 8};
         System.out.println(Arrays.toString(array));
@@ -18,7 +20,25 @@ public class Sort {
         Long l = 3232l;
         Float f = 9329329f;
 
+        MyObject[] array = new MyObject[3];
+        array[0] = new MyObject(1, 3);
+        array[1] = new MyObject(2, 30);
+        array[2] = new MyObject(3, 1);
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+*/
+        List<MyObject> list = new ArrayList();
+        list.add(new MyObject(1, 3));
+        list.add(new MyObject(2, 30));
+        list.add(new MyObject(3, 1));
+        //Collections.sort(list);
 
+        list.sort(new Comparator<MyObject>() {
+            public int compare(MyObject o1, MyObject o2) {
+                return o2.value - o1.value;
+            }
+        });
+        System.out.println(list);
     }
 
     void bubbleSort(int[] array) {
@@ -96,4 +116,21 @@ public class Sort {
 
         return left;
     }
+
+    private static class MyObject {
+        private int key;
+        private int value;
+
+        MyObject(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return "key:" + Integer.toString(key) + "|value:" + Integer.toString(value);
+        }
+    }
+
+
 }
