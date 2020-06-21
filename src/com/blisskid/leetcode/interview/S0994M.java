@@ -1,5 +1,7 @@
 package com.blisskid.leetcode.interview;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 
@@ -16,8 +18,9 @@ class Coordinate {
 class S0994M {
 
     public static void main(String[] args) {
-        int[][] grid = new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}};
-        //int[][] grid = new int[][]{{1,2}};
+        //int[][] grid = new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}};
+//        int[][] grid = new int[][]{{1, 2}};
+        int[][] grid = new int[][]{{1}, {2}, {1}, {2}};
         System.out.println(new S0994M().orangesRotting(grid));
     }
 
@@ -30,6 +33,7 @@ class S0994M {
     public int orangesRotting(int[][] grid) {
         stack = new Stack();
         count = 0;
+        int lastCount = count;
         int number = 0;
         visitArray = new int[grid.length][grid[0].length];
         for (int i = 0; i < grid.length; i++) {
@@ -45,9 +49,16 @@ class S0994M {
         }
         int result = 0;
         while (!stack.isEmpty()) {
-            Coordinate co = stack.pop();
-            affectAdj(co.row, co.col, grid);
-            result++;
+            List<Coordinate> list = new ArrayList<>();
+            while (!stack.isEmpty()) {
+                list.add(stack.pop());
+            }
+            lastCount = count;
+            for (Coordinate co : list) {
+                affectAdj(co.row, co.col, grid);
+            }
+            if (count > lastCount)
+                result++;
             if (count == number)
                 break;
 
