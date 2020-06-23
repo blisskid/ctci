@@ -5,16 +5,6 @@ import java.util.List;
 import java.util.Stack;
 
 
-class Coordinate {
-    public int row;
-    public int col;
-
-    Coordinate(int row, int col) {
-        this.row = row;
-        this.col = col;
-    }
-}
-
 class S0994M {
 
     public static void main(String[] args) {
@@ -22,6 +12,16 @@ class S0994M {
 //        int[][] grid = new int[][]{{1, 2}};
         int[][] grid = new int[][]{{1}, {2}, {1}, {2}};
         System.out.println(new S0994M().orangesRotting(grid));
+    }
+
+    class Coordinate {
+        public int row;
+        public int col;
+
+        Coordinate(int row, int col) {
+            this.row = row;
+            this.col = col;
+        }
     }
 
     private Stack<Coordinate> stack;
