@@ -3,7 +3,13 @@ package com.blisskid.leetcode.list;
 public class S0707M {
 
     public static void main(String[] args) {
-
+        S0707M s = new S0707M();
+        s.addAtHead(1);
+        s.addAtTail(3);
+        s.addAtIndex(1, 2);
+        System.out.println(s.get(1));
+        s.deleteAtIndex(0);
+        System.out.println(s.get(0));
     }
 
     private class Node {
@@ -47,6 +53,7 @@ public class S0707M {
         if (this.size == 0) {
             this.tail = new Node(val, 0);
             this.head = this.tail;
+            this.size++;
         } else {
             Node temp = new Node(val, 0);
             head.pre = temp;
@@ -58,6 +65,7 @@ public class S0707M {
                 itr = itr.next;
                 itr.index++;
             }
+            this.size++;
         }
     }
 
@@ -66,11 +74,13 @@ public class S0707M {
         if (this.size == 0) {
             this.tail = new Node(val, 0);
             this.head = this.tail;
+            this.size++;
         } else {
-            Node temp = new Node(val, tail.index++);
+            Node temp = new Node(val, tail.index + 1);
             temp.pre = tail;
             tail.next = temp;
             tail = temp;
+            this.size++;
         }
     }
 
@@ -80,6 +90,8 @@ public class S0707M {
             addAtTail(val);
         } else if (index > tail.index + 1) {
             return;
+        } else if (index == 0) {
+            this.addAtHead(val);
         } else {
             Node itr = head;
             while (itr != null) {
@@ -89,12 +101,14 @@ public class S0707M {
                     node.pre = itr.pre;
                     node.next = itr;
                     itr.pre = node;
+                    node.pre.next = node;
                     //update index
                     Node tempItr = itr;
                     while (tempItr != null) {
                         tempItr.index++;
                         tempItr = tempItr.next;
                     }
+                    this.size++;
                     return;
                 }
                 itr = itr.next;
@@ -111,15 +125,27 @@ public class S0707M {
             while (itr != null) {
                 if (itr.index == index) {
                     //delete itr
-                    itr.pre.next = itr.next;
-                    itr.next.pre = itr.pre;
+                    if (itr.pre != null) {
+                        itr.pre.next = itr.next;
+                    } else {
+                        //delete head
+                        head = itr.next;
+                    }
+
+                    if (itr.next != null)
+                        itr.next.pre = itr.pre;
+                    else
+                        tail = itr.pre;
                     //update index;
-                    Node tempItr = itr.next;
-                    while (tempItr != null) {
-                        tempItr.index--;
-                        tempItr = tempItr.next;
+                    if (itr.next != null) {
+                        Node tempItr = itr.next;
+                        while (tempItr != null) {
+                            tempItr.index--;
+                            tempItr = tempItr.next;
+                        }
                     }
                     itr = null;
+                    this.size--;
                     return;
                 }
                 itr = itr.next;
