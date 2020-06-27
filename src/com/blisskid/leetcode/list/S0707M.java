@@ -6,18 +6,22 @@ public class S0707M {
         S0707M s = new S0707M();
         s.addAtHead(1);
         s.addAtTail(3);
+//        s.addAtIndex(0, 10);
+//        s.addAtIndex(0, 20);
+//        s.addAtIndex(1, 30);
         s.addAtIndex(1, 2);
         System.out.println(s.get(1));
-        s.deleteAtIndex(0);
-        System.out.println(s.get(0));
+        s.deleteAtIndex(1);
+//        s.deleteAtIndex(0);
+        System.out.println(s.get(1));
     }
 
     private class Node {
-        public int val;
-        public int index;
-        public Node next;
-        public Node pre;
-        public Node(int val, int index) {
+        private int val;
+        private int index;
+        private Node next;
+        private Node pre;
+        private Node(int val, int index) {
             this.val = val;
             this.index = index;
             this.next = null;
@@ -86,9 +90,9 @@ public class S0707M {
 
     /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
     public void addAtIndex(int index, int val) {
-        if (index == tail.index + 1) {
+        if (index == this.size) {
             addAtTail(val);
-        } else if (index > tail.index + 1) {
+        } else if (index > this.size) {
             return;
         } else if (index == 0) {
             this.addAtHead(val);
