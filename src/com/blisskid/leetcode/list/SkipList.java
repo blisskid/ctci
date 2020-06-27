@@ -4,6 +4,19 @@ import java.util.*;
 
 class Skiplist {
 
+    public static void main(String[] args) {
+        Skiplist skiplist = new Skiplist();
+        skiplist.add(1);
+        skiplist.add(2);
+        skiplist.add(3);
+        skiplist.search(0);   // return false.
+        skiplist.add(4);
+        skiplist.search(1);   // return true.
+        skiplist.erase(0);    // return false, 0 is not in skiplist.
+        skiplist.erase(1);    // return true.
+        skiplist.search(1);   // return false, 1 has
+    }
+
     private LinkedList<MyList> matrix;
 
     public Skiplist() {
@@ -88,19 +101,23 @@ class Skiplist {
             //find the position to insert
             List indexList = findPos(num);
             MyList levelOne = matrix.getFirst();
-            Node lastNode = levelOne.addAtIndex((int)indexList.get(1), num);
+            Node preNode = levelOne.get((int) indexList.get(0));
+            Node lastNode = levelOne.addAtIndex((int) indexList.get(1), num);
             Node currentNode = null;
+            int index;
             Iterator<MyList> itr = matrix.iterator();
+            itr.next();
             while (coinFlip()) {
                 if (itr.hasNext()) {
                     MyList tempList = itr.next();
-                    int index = (int) indexList.get(0) + 1;
+                    preNode = preNode.up;
+                    index = preNode.index + 1;
                     currentNode = tempList.addAtIndex(index, num);
                 } else {
                     MyList temp = new MyList();
                     currentNode = temp.addAtHead(num);
                     matrix.add(temp);
-                    itr.next();
+                    //itr.next();
                 }
                 lastNode.up = currentNode;
                 currentNode.down = lastNode;
@@ -114,7 +131,7 @@ class Skiplist {
         int index = get(num);
         if (index != -1) {
             MyList firstList = matrix.getFirst();
-            Node nodeForDel= firstList.get(index);
+            Node nodeForDel = firstList.get(index);
             MyList listForDel = firstList;
             while (nodeForDel.up != null) {
                 nodeForDel = nodeForDel.up;
@@ -134,7 +151,7 @@ class Skiplist {
         MyList myList = matrix.getLast();
         //iterate mylist to check
         Node itr = myList.head;
-        while (itr.next != null) {
+        while (itr != null) {
             if (num == itr.val) {
                 //find the index from top to bottom
                 Node temp = itr;
@@ -151,6 +168,7 @@ class Skiplist {
                 if (itr.pre == null) {
                     result.add(-1);
                     result.add(0);
+                    return result;
                 } else {
                     Node temp = itr.pre;
                     //find level 1 index
@@ -170,6 +188,9 @@ class Skiplist {
             }
             itr = itr.next;
         }
+        //add after tail
+        result.add(matrix.getFirst().size - 1);
+        result.add(matrix.getFirst().size);
         return result;
     }
 
@@ -202,14 +223,18 @@ class Skiplist {
         private Node tail;
         private Node head;
 
-        /** Initialize your data structure here. */
+        /**
+         * Initialize your data structure here.
+         */
         public MyList() {
             this.size = 0;
             this.tail = null;
             this.head = null;
         }
 
-        /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
+        /**
+         * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
+         */
         public Node get(int index) {
             Node itr = head;
             while (itr != null) {
@@ -221,7 +246,9 @@ class Skiplist {
             return null;
         }
 
-        /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
+        /**
+         * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+         */
         public Node addAtHead(int val) {
             if (this.size == 0) {
                 this.tail = new Node(val, 0);
@@ -243,7 +270,9 @@ class Skiplist {
             return this.head;
         }
 
-        /** Append a node of value val to the last element of the linked list. */
+        /**
+         * Append a node of value val to the last element of the linked list.
+         */
         public Node addAtTail(int val) {
             if (this.size == 0) {
                 this.tail = new Node(val, 0);
@@ -259,7 +288,9 @@ class Skiplist {
             return this.tail;
         }
 
-        /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
+        /**
+         * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
+         */
         public Node addAtIndex(int index, int val) {
             if (index == this.size) {
                 return addAtTail(val);
@@ -292,7 +323,9 @@ class Skiplist {
             }
         }
 
-        /** Delete the index-th node in the linked list, if the index is valid. */
+        /**
+         * Delete the index-th node in the linked list, if the index is valid.
+         */
         public void deleteAtIndex(int index) {
             if (index > tail.index) {
                 return;
@@ -330,7 +363,6 @@ class Skiplist {
         }
 
     }
-
 
 
 }
