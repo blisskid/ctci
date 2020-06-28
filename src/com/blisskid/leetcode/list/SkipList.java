@@ -9,12 +9,12 @@ class Skiplist {
         skiplist.add(1);
         skiplist.add(2);
         skiplist.add(3);
-        skiplist.search(0);   // return false.
+        System.out.println(skiplist.search(0)); // return false.
         skiplist.add(4);
-        skiplist.search(1);   // return true.
-        skiplist.erase(0);    // return false, 0 is not in skiplist.
-        skiplist.erase(1);    // return true.
-        skiplist.search(1);   // return false, 1 has
+        System.out.println(skiplist.search(1)); // return true.
+        System.out.println(skiplist.erase(0));    // return false, 0 is not in skiplist.
+        System.out.println(skiplist.erase(1));    // return true.
+        System.out.println(skiplist.search(1));   // return false, 1 has
     }
 
     private LinkedList<MyList> matrix;
@@ -27,10 +27,10 @@ class Skiplist {
         MyList myList = matrix.getLast();
         //iterate mylist to check
         Node itr = myList.head;
-        while (itr.next != null) {
+        while (itr != null) {
             if (target == itr.val) {
+                //find the index from top to bottom
                 Node temp = itr;
-                //find level 1 index
                 while (temp.down != null) {
                     temp = temp.down;
                 }
@@ -39,6 +39,16 @@ class Skiplist {
             if (target < itr.val) {
                 //get the pre node, dig to level 0
                 if (itr.pre == null) {
+                    Node temp = itr;
+                    //find level 1 index
+                    while (temp.down != null) {
+                        temp = temp.down;
+                    }
+                    while (temp.pre != null) {
+                        temp = temp.pre;
+                        if (temp.val == target)
+                            return temp.index;
+                    }
                     return -1;
                 } else {
                     Node temp = itr.pre;
@@ -61,35 +71,7 @@ class Skiplist {
     }
 
     public boolean search(int target) {
-        MyList myList = matrix.getLast();
-        //iterate mylist to check
-        Node itr = myList.head;
-        while (itr.next != null) {
-            if (target == itr.val) {
-                return true;
-            }
-            if (target < itr.val) {
-                //get the pre node, dig to level 0
-                if (itr.pre == null) {
-                    return false;
-                } else {
-                    Node temp = itr.pre;
-                    //find level 1 index
-                    while (temp.down != null) {
-                        temp = temp.down;
-                    }
-                    //find from temp index to right
-                    while (temp.next != null) {
-                        temp = temp.next;
-                        if (temp.val == target) {
-                            return true;
-                        }
-                    }
-                }
-            }
-            itr = itr.next;
-        }
-        return false;
+        return get(target) != -1;
     }
 
     public void add(int num) {
@@ -107,21 +89,32 @@ class Skiplist {
             int index;
             Iterator<MyList> itr = matrix.iterator();
             itr.next();
-            while (coinFlip()) {
-                if (itr.hasNext()) {
+            Boolean coinFlag = false;
+            while (itr.hasNext()) {
+                coinFlag = coinFlip();
+                if (coinFlag) {
                     MyList tempList = itr.next();
                     preNode = preNode.up;
                     index = preNode.index + 1;
                     currentNode = tempList.addAtIndex(index, num);
+                    lastNode.up = currentNode;
+                    currentNode.down = lastNode;
+                    lastNode = currentNode;
                 } else {
+                    break;
+                }
+            }
+            //itr is the top level or coinFlag is false
+            if (!coinFlag) {
+                //itr is the top level
+                while (coinFlip()) {
                     MyList temp = new MyList();
                     currentNode = temp.addAtHead(num);
                     matrix.add(temp);
-                    //itr.next();
+                    lastNode.up = currentNode;
+                    currentNode.down = lastNode;
+                    lastNode = currentNode;
                 }
-                lastNode.up = currentNode;
-                currentNode.down = lastNode;
-                lastNode = currentNode;
             }
         }
     }
@@ -166,6 +159,20 @@ class Skiplist {
             if (num < itr.val) {
                 //get the pre node, dig to level 0
                 if (itr.pre == null) {
+                    /*
+                    Node temp = itr;
+                    //find level 1 index
+                    while (temp.down != null) {
+                        temp = temp.down;
+                    }
+                    result.add(temp.index);
+                    while (temp.pre != null) {
+                        temp = temp.pre;
+                        if (temp.val >= num)
+                            return temp.index;
+                    }
+                    return -1;
+                    */
                     result.add(-1);
                     result.add(0);
                     return result;
