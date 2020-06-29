@@ -6,15 +6,41 @@ class Skiplist {
 
     public static void main(String[] args) {
         Skiplist skiplist = new Skiplist();
-        skiplist.add(1);
-        skiplist.add(2);
-        skiplist.add(3);
-        System.out.println(skiplist.search(0)); // return false.
+        skiplist.add(9);
         skiplist.add(4);
-        System.out.println(skiplist.search(1)); // return true.
-        System.out.println(skiplist.erase(0));    // return false, 0 is not in skiplist.
-        System.out.println(skiplist.erase(1));    // return true.
-        System.out.println(skiplist.search(1));   // return false, 1 has
+        skiplist.add(5);
+        skiplist.add(6);
+        skiplist.add(9);
+        System.out.println(skiplist.erase(2));
+        System.out.println(skiplist.erase(1));
+        skiplist.add(2);
+        System.out.println(skiplist.search(7));
+        System.out.println(skiplist.search(4));
+        skiplist.add(5);
+        System.out.println(skiplist.erase(6));
+        System.out.println(skiplist.search(5));
+        skiplist.add(6);
+        skiplist.add(7);
+        skiplist.add(4);
+        System.out.println(skiplist.erase(3));
+        System.out.println(skiplist.search(6));//true
+        System.out.println(skiplist.search(3));
+        System.out.println(skiplist.search(4));
+        System.out.println(skiplist.search(3));
+        System.out.println(skiplist.search(8));
+        System.out.println(skiplist.erase(7));
+        System.out.println(skiplist.erase(6));
+        System.out.println(skiplist.search(7));
+        System.out.println(skiplist.erase(4));
+        skiplist.add(1);
+        skiplist.add(6);
+        System.out.println(skiplist.erase(3));
+        skiplist.add(4);
+        System.out.println(skiplist.search(7));
+        System.out.println(skiplist.search(6));
+        System.out.println(skiplist.search(1));
+        System.out.println(skiplist.search(0));
+        System.out.println(skiplist.search(3));
     }
 
     private LinkedList<MyList> matrix;
@@ -49,7 +75,6 @@ class Skiplist {
                         if (temp.val == target)
                             return temp.index;
                     }
-                    return -1;
                 } else {
                     Node temp = itr.pre;
                     //find level 1 index
@@ -64,8 +89,21 @@ class Skiplist {
                         }
                     }
                 }
+                return -1;
             }
             itr = itr.next;
+        }
+        if (itr == null) {
+            Node temp = myList.tail;
+            while (temp.down != null) {
+                temp = temp.down;
+            }
+            while (temp.next != null) {
+                temp = temp.next;
+                if (temp.val == target) {
+                    return temp.index;
+                }
+            }
         }
         return -1;
     }
@@ -81,12 +119,10 @@ class Skiplist {
             matrix.add(levelOne);
         } else {
             //find the position to insert
-            List indexList = findPos(num);
+            int index = findPos(num);
             MyList levelOne = matrix.getFirst();
-            Node preNode = levelOne.get((int) indexList.get(0));
-            Node lastNode = levelOne.addAtIndex((int) indexList.get(1), num);
+            Node lastNode = levelOne.addAtIndex(index, num);
             Node currentNode = null;
-            int index;
             Iterator<MyList> itr = matrix.iterator();
             itr.next();
             Boolean coinFlag = false;
@@ -94,8 +130,7 @@ class Skiplist {
                 coinFlag = coinFlip();
                 if (coinFlag) {
                     MyList tempList = itr.next();
-                    preNode = preNode.up;
-                    index = preNode.index + 1;
+                    index = findPosFromList(tempList, num);
                     currentNode = tempList.addAtIndex(index, num);
                     lastNode.up = currentNode;
                     currentNode.down = lastNode;
@@ -125,21 +160,66 @@ class Skiplist {
         if (index != -1) {
             MyList firstList = matrix.getFirst();
             Node nodeForDel = firstList.get(index);
-            MyList listForDel = firstList;
-            while (nodeForDel.up != null) {
-                nodeForDel = nodeForDel.up;
-                listForDel.deleteAtIndex(index);
-                index = nodeForDel.index;
-                listForDel = matrix.get(matrix.indexOf(listForDel) + 1);
+            for (MyList ele : matrix) {
+                ele.deleteAtIndex(index);
+                if (nodeForDel.up != null) {
+                    nodeForDel = nodeForDel.up;
+                    index = nodeForDel.index;
+                } else {
+                    break;
+                }
             }
+            return true;
+        } else {
+            return false;
         }
-        return false;
     }
+    private int findPosFromList(MyList tempList, int num) {
+        Node itr = tempList.head;
+        while (itr != null && num > itr.val) itr = itr.next;
+        if (itr == null) {
+            //num is greater than all numbers in tempList
+            return tempList.size;
+        } else {
+            //itr.val is equal or greater than val,insert before itr
+            return itr.index;
+        }
+    }
+    //return the index to insert
+    private int findPos(int num) {
+        MyList myList = matrix.getLast();
+        //iterate mylist to check
+        Node itr = myList.head;
+        while (itr != null) {
+            if (num <= itr.val) {
+                //find the index from top to bottom
+                Node temp = itr;
+                while (temp.down != null) {
+                    temp = temp.down;
+                }
+                if (num == temp.val) {
+                    return temp.index;
+                } else {
+                    //num < temp.val
+                    while (temp.pre != null) {
+                        temp = temp.pre;
+                        if (num > temp.val) {
+                            return temp.next.index;
+                        }
 
+                    }
+                }
+
+            }
+            itr = itr.next;
+        }
+        //add after tail
+        return matrix.getFirst().size;
+    }
     //return the index to insert
     //record the left element
     //return list, list.get(0) is the last top down index, list.get(1) is the index to insert
-    private List<Integer> findPos(int num) {
+    private List<Integer> findPos1(int num) {
         List<Integer> result = new ArrayList();
         MyList myList = matrix.getLast();
         //iterate mylist to check
