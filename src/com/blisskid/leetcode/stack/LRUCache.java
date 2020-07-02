@@ -4,15 +4,17 @@ class LRUCache {
 
     public static void main(String[] args) {
         LRUCache l = new LRUCache(2);
+        l.put(2, 1);
         l.put(1, 1);
-        l.put(2, 2);
-        l.get(1);
-        l.put(3, 3);
-        l.get(2);
-        l.put(4, 4);
-        l.get(1);
-        l.get(3);
-        l.get(4);
+        l.put(2, 3);
+        l.put(4, 1);
+        System.out.println(l.get(1));
+
+//        System.out.println(l.get(2));
+//        l.put(4, 1);
+        System.out.println(l.get(2));
+//        System.out.println(l.get(3));
+//        System.out.println(l.get(4));
     }
 
     private Map<Integer, Obj> cache;
@@ -55,23 +57,24 @@ class LRUCache {
             if (cache.size() >= cap) {
                 //cache is full, delete the least fre
                 Obj del = new Obj(0);
-                int delKey = 0;
+                Integer delKey = null;
                 for (Map.Entry<Integer, Obj> entry : cache.entrySet()) {
-                    if (entry.getValue().fre < del.fre) {
+                    if (entry.getValue().fre <= del.fre) {
                         del = entry.getValue();
-                        key = entry.getKey();
+                        delKey = entry.getKey();
                     }
                 }
-                cache.remove(key);
+                if (delKey != null)
+                    cache.remove(delKey);
             }
-            //add ele
-            Obj obj = new Obj(value);
-            cache.put(key, obj);
-            //update fre
-            for (Map.Entry<Integer, Obj> entry : cache.entrySet()) {
-                if (entry.getKey() != key) {
-                    entry.getValue().fre--;
-                }
+        }
+        //add or update ele, and update fre
+        Obj obj = new Obj(value);
+        cache.put(key, obj);
+        //update fre
+        for (Map.Entry<Integer, Obj> entry : cache.entrySet()) {
+            if (entry.getKey() != key) {
+                entry.getValue().fre--;
             }
         }
     }
