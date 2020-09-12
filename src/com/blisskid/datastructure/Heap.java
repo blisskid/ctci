@@ -15,18 +15,10 @@ public class Heap {
         h.add(-5);
         h.add(-8);
 
-        h.print(0);
-    }
-
-    private class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-            left = null;
-            right = null;
+        //h.print(0);
+        int[] res = h.sort();
+        for (int i : res) {
+            System.out.println(i);
         }
     }
 
@@ -42,8 +34,29 @@ public class Heap {
         return 0;
     }
 
-    public void remove() {
+    public int length() {
+        return index;
+    }
 
+    public int[] sort() {
+        int[] res = new int[this.length()];
+        for (int i = 0; i < 10; i++) {
+            res[i] = this.remove();
+        }
+        return res;
+    }
+
+    //remove top, rejust heap
+    public int remove() {
+        int res = arr[0];
+        swap(0, index - 1);
+        index--;
+        adjFromTop(0, arr[0]);
+        return res;
+    }
+
+    public int getLast() {
+        return arr[index - 1];
     }
 
     public void print(int index) {
@@ -56,26 +69,35 @@ public class Heap {
 
     public void add(int val) {
         arr[index] = val;
-        adj(index, val);
+        adjFromBottom(index, val);
         index++;
     }
 
     //ajust arr, make the order correct
-    private void adj(int i, int val) {
+    private void adjFromBottom(int i, int val) {
         if (i <= 0) return;
         //check if this val is smaller than parent or brother
         int pi = (i - 1) / 2;
         int parent = this.arr[pi];
         if (val < parent) {
             swap(pi, i);
-            adj(pi, val);
-        } else {
-            if (i % 2 == 0) {
-                //has left brother
-                int li = i - 1;
-                int brother = this.arr[li];
-                if (val < brother) {
-                    swap(li, i);
+            adjFromBottom(pi, val);
+        }
+    }
+
+    private void adjFromTop(int i, int val) {
+        int lc = 2 * i + 1;
+        int rc = 2 * i + 2;
+        if (rc < this.length()) {
+            if (arr[lc] < arr[rc]) {
+                if (arr[lc] < val) {
+                    swap(lc, i);
+                    adjFromTop(lc, val);
+                }
+            } else {
+                if (arr[rc] < val) {
+                    swap(rc, i);
+                    adjFromTop(rc, val);
                 }
             }
         }
