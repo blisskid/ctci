@@ -2,15 +2,17 @@ package com.blisskid.fb;
 import java.io.*;
 import java.util.*;
 
-class Dino {
+class Dino implements Comparable<Dino> {
+    //speed = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * SQRT(LEG_LENGTH * g)
     private String name;
     private Double legLen;
     private String diet;
     private Double strideLen;
     private String stance;
+    private Double speed;
 
-    Dino () {
-
+    public void setSpeed() {
+        speed = ((strideLen / legLen) - 1) * Math.sqrt(legLen * 9.8);
     }
 
     public String getName() {
@@ -52,6 +54,11 @@ class Dino {
     public void setStance(String stance) {
         this.stance = stance;
     }
+
+    public int compareTo(Dino o) {
+        return o.speed.compareTo(speed);
+    }
+
 }
 
 public class Dinosaur {
@@ -64,12 +71,37 @@ public class Dinosaur {
 
 
     private List<Dino> readFile() {
-        File f1 = new File("/Users/tongadele/Documents//GitHub/ctci/out/production/ctci/com/blisskid/fb/dataset1.csv");
+        List<Dino> list = new ArrayList();
+        Map<String, Dino> map = new HashMap();
+
+        File f1 = new File("/Users/blisskid/Documents/GitHub/ctci/out/production/ctci/com/blisskid/fb/dataset1.csv");
+        File f2 = new File("/Users/blisskid/Documents/GitHub/ctci/out/production/ctci/com/blisskid/fb/dataset2.csv");
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(f1)));
+            reader.readLine();
             String line = reader.readLine();
             while (line != null) {
                 System.out.println(line);
+                String[] arr = line.split(",");
+                Dino dino = new Dino();
+                dino.setName(arr[0]);
+                dino.setLegLen(Double.parseDouble(arr[1]));
+                dino.setDiet(arr[2]);
+                map.put(arr[0], dino);
+                line = reader.readLine();
+            }
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(f2)));
+            reader.readLine();
+            line = reader.readLine();
+            while (line != null) {
+                System.out.println(line);
+                String[] arr = line.split(",");
+                Dino dino = map.get(arr[0]);
+                if (dino != null) {
+                    dino.setStrideLen(Double.parseDouble(arr[1]));
+                    dino.setStance(arr[2]);
+                    dino.setSpeed();
+                }
                 line = reader.readLine();
             }
             reader.close();
@@ -77,6 +109,14 @@ public class Dinosaur {
             e.printStackTrace();
         }
 
+        for (Map.Entry<String, Dino> entry : map.entrySet()) {
+            Dino d = entry.getValue();
+            if (d.getStance() != null && d.getStance().equals("bipedal"))
+                list.add(d);
+        }
+
+        Collections.sort(list);
+        return list;
     }
 
 
