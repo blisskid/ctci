@@ -12,6 +12,7 @@ public class S0355M {
     //tow map to store tweet and follow
     Map<Integer, List<Tweet>> tMap = null;
     Map<Integer, List<Integer>> fMap = null;
+    private int count = 0;
 
     /** Initialize your data structure here. */
     public S0355M() {
@@ -37,16 +38,18 @@ public class S0355M {
 
     /** Compose a new tweet. */
     public void postTweet(int userId, int tweetId) {
+        if (count == 100) count = 0;
         List<Tweet> tweets = tMap.get(userId);
         if (tweets == null || tweets.isEmpty()) {
             List<Tweet> list = new ArrayList();
-            Tweet tweet = new Tweet(tweetId, System.currentTimeMillis());
+            Tweet tweet = new Tweet(tweetId, System.currentTimeMillis() * 100 + this.count);
             list.add(tweet);
             tMap.put(userId, list);
         } else {
-            Tweet tweet = new Tweet(tweetId, System.currentTimeMillis());
+            Tweet tweet = new Tweet(tweetId, System.currentTimeMillis() * 100 + this.count);
             tweets.add(tweet);
         }
+        count++;
     }
 
     /** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
