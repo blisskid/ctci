@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="20337216-2ba0-4813-be87-54d263ee58cd" name="Default Changelist" comment="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/AddTwoNum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/LongestSubstring.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/Median.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/Palindromic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ctci/com/blisskid/leetcode/SumNum.class" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,18 +66,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/blisskid/basic" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.S0763M">
     <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -279,18 +274,43 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ii" />
     <MESSAGE value="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:blisskid/ctci&#10;&#10;# Conflicts:&#10;#&#9;src/com/blisskid/leetcode/Solution851.java" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="796" y="278" key="RollbackChangesDialog" timestamp="1603804368554">
+      <screen x="0" y="0" width="1985" height="1152" />
+    </state>
+    <state x="796" y="278" key="RollbackChangesDialog/0.0.1985.1152@0.0.1985.1152" timestamp="1603804368554" />
+    <state x="494" y="221" key="SettingsEditor" timestamp="1603804204778">
+      <screen x="0" y="0" width="1985" height="1152" />
+    </state>
+    <state x="494" y="221" key="SettingsEditor/0.0.1985.1152@0.0.1985.1152" timestamp="1603804204778" />
+    <state x="780" y="363" key="git4idea.merge.GitMergeDialog" timestamp="1603807244439">
+      <screen x="0" y="0" width="1985" height="1152" />
+    </state>
+    <state x="780" y="363" key="git4idea.merge.GitMergeDialog/0.0.1985.1152@0.0.1985.1152" timestamp="1603807244439" />
+    <state x="721" y="363" key="git4idea.merge.GitPullDialog" timestamp="1603807332457">
+      <screen x="0" y="0" width="1985" height="1152" />
+    </state>
+    <state x="721" y="363" key="git4idea.merge.GitPullDialog/0.0.1985.1152@0.0.1985.1152" timestamp="1603807332457" />
+    <state x="801" y="474" key="git4idea.ui.GitStashDialog" timestamp="1603807222106">
+      <screen x="0" y="0" width="1985" height="1152" />
+    </state>
+    <state x="801" y="474" key="git4idea.ui.GitStashDialog/0.0.1985.1152@0.0.1985.1152" timestamp="1603807222106" />
+    <state x="629" y="422" key="git4idea.ui.GitUnstashDialog" timestamp="1603807311830">
+      <screen x="0" y="0" width="1985" height="1152" />
+    </state>
+    <state x="629" y="422" key="git4idea.ui.GitUnstashDialog/0.0.1985.1152@0.0.1985.1152" timestamp="1603807311830" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -307,6 +327,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="java.lang.Integer" fieldName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="theStack.peek()" />
