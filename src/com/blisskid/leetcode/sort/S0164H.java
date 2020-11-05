@@ -27,11 +27,39 @@ public class S0164H {
 
     public static void main(String[] args) {
         //System.out.println(new S0164H().maximumGap(new int[]{100,3,2,1}));
-        System.out.println(new S0164H().maximumGap(new int[]{3,6,9,1}));
+        System.out.println(new S0164H().maximumGap(new int[]{100,3,2,1}));
 
     }
 
     public int maximumGap(int[] nums) {
+        List<Integer>[] array = new ArrayList[10];
+        for (int i = 0; i <= 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                array[j] = new ArrayList();
+            }
+            for (int j = 0; j < nums.length; j++) {
+                long temp = nums[j] % (long) Math.pow(10, i + 1);
+                int k = (int) (temp / (long) Math.pow(10, i));
+                array[k].add(nums[j]);
+            }
+            int index = 0;
+            for (int j = 0; j < 10; j++) {
+                for (Integer o : array[j]) {
+                    nums[index++] = o;
+                }
+            }
+            //System.out.println("111");
+        }
+
+        int res = -1;
+        for (int i = 1; i < nums.length; i++) {
+            res = Math.max(res, nums[i] - nums[i - 1]);
+        }
+
+        return res;
+    }
+
+    public int maximumGap1(int[] nums) {
         //calculate the max length of nums
         String[] numsStr = new String[nums.length];
         int maxLen = 0;
