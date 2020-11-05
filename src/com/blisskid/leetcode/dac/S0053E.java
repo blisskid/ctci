@@ -9,6 +9,50 @@ public class S0053E {
     }
 
     public int maxSubArray(int[] nums) {
+        if (nums == null)   return 0;
+        if (nums.length == 1) return nums[0];
+        int size = nums.length;
+        int[] f = new int[size];
+        f[0] = nums[0];
+        int start = 0, end = 0;
+        for (int i = 1; i < size; i++) {
+            if (end == i - 1) {
+                if (nums[i] >= 0) {
+                    if (f[i - 1] > 0) {
+                        f[i] = f[i - 1] + nums[i];
+                        end = i;
+                    } else {
+                        f[i] = nums[i];
+                        start = i;
+                        end = i;
+                    }
+                } else {
+                    f[i] = f[i - 1];
+                }
+            } else {
+                if (nums[i] < 0) {
+                    f[i] = f[i - 1];
+                } else {
+                    int temp = 0;
+                    for (int j = end + 1; j <= i; j++) {
+                        temp += nums[j];
+                    }
+                    temp += f[i - 1];
+                    if (temp > nums[i]) {
+                        f[i] = temp;
+                        end = i;
+                    } else {
+                        start = i;
+                        end = i;
+                        f[i] = nums[i];
+                    }
+                }
+            }
+        }
+        return f[size - 1];
+    }
+
+    public int maxSubArray2(int[] nums) {
         int size = nums.length;
         if (size == 1) return nums[0];
         int[] result = new int[size];
