@@ -4,49 +4,45 @@ public class S0053E {
 
     public static void main(String[] args) {
         S0053E s = new S0053E();
-        int[] nums = new int[]{-2,1,-3,4,-1,2,1,-5,4};
+        int[] nums = new int[]{8,-19,5,-4,20};
         System.out.println(s.maxSubArray(nums));
     }
 
     public int maxSubArray(int[] nums) {
-        if (nums == null)   return 0;
         if (nums.length == 1) return nums[0];
         int size = nums.length;
         int[] f = new int[size];
         f[0] = nums[0];
         int start = 0, end = 0;
         for (int i = 1; i < size; i++) {
-            if (end == i - 1) {
-                if (nums[i] >= 0) {
-                    if (f[i - 1] > 0) {
-                        f[i] = f[i - 1] + nums[i];
-                        end = i;
-                    } else {
-                        f[i] = nums[i];
-                        start = i;
-                        end = i;
-                    }
+            int temp = 0;
+            for (int j = end + 1; j <= i; j++) {
+                temp += nums[j];
+            }
+            temp += f[i - 1];
+            int temp1 = nums[i];
+            int temp1start = i;
+            int last = nums[i];
+            for (int j = i - 1; j > end; j--) {
+                temp1 += nums[j];
+                if (temp1 > last) {
+                    temp1start = j;
+                    last = temp1;
                 } else {
-                    f[i] = f[i - 1];
+                    temp1 = last;
                 }
+            }
+            //temp, f[i - 1], temp1三个取最大
+            //temp = f[i - 1] + temp1 + 中间段, temp1大于0，中间段小于0
+            if (temp >= temp1 && temp >= f[i - 1]) {
+                f[i] = temp;
+                end = i;
+            } else if (temp1 >= temp && temp1 >= f[i - 1]) {
+                f[i] = temp1;
+                start = temp1start;
+                end = i;
             } else {
-                if (nums[i] < 0) {
-                    f[i] = f[i - 1];
-                } else {
-                    int temp = 0;
-                    for (int j = end + 1; j <= i; j++) {
-                        temp += nums[j];
-                    }
-                    temp += f[i - 1];
-                    if (temp > nums[i]) {
-                        f[i] = temp;
-                        end = i;
-                    } else {
-                        start = i;
-                        end = i;
-                        f[i] = nums[i];
-                    }
-                }
+                f[i] = f[i - 1];
             }
         }
         return f[size - 1];
