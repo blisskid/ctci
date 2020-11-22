@@ -8,35 +8,25 @@ public class S0026M {
     }
 
     private List<List<Integer>> res=new ArrayList();
+    LinkedList<Integer> track=new LinkedList();
+    //Set<Integer> track=new HashSet();
 
     public List<List<Integer>> permute(int[] nums) {
-        LinkedList<Integer> track=new LinkedList();
-        //Queue<Integer> choices=new LinkedList<>();
-        //initialize choices
-        /*
-        for(int i=0;i<nums.length;i++){
-            choices.add(nums[i]);
-        }
-        */
-        f(track,nums);
+
+        f(nums);
         return res;
     }
 
-    private void f(LinkedList<Integer> track, int[] choices){
-        //List<Integer> track=new LinkedList<>(t);
-        //List<Integer> choices=new ArrayList<>(c);
+    private void f(int[] choices){
         if(track.size()==choices.length){
-            res.add(new LinkedList<>(track));
-            //track=new ArrayList();
+            res.add(new LinkedList(track));
             return;
         }else{
-            //List<Integer> tempChoices=new ArrayList(choices);
-            //List<Integer> tempTrack=new ArrayList(track);
             for(int i=0;i<choices.length;i++){
                 if(!track.contains(choices[i])){
                     track.add(choices[i]);
-                    f(track, choices);
-                    track.removeLast();
+                    f(choices);
+                    track.remove((Integer)choices[i]);
                 }
             }
         }
