@@ -4,8 +4,8 @@ import java.util.*;
 public class S0282H {
     public static void main(String[] args) {
         S0282H s=new S0282H();
-        System.out.println(s.addOperators("3456237490",9191));
-//        System.out.println(s.cal("+@@*@+@-+","3456237490",9191));
+//        System.out.println(s.addOperators("2147483648",-2147483648));
+        System.out.println(s.cal("@@@@@@@@@","2147483648",-2147483648));
     }
 
     List<String> res = new LinkedList();
@@ -54,24 +54,24 @@ public class S0282H {
     }
     private boolean cal(String ops, String num,int target){
         Stack<Character> s=new Stack();
-        Stack<Integer> d=new Stack();
-        d.push(num.charAt(0)-'0');
+        Stack<Long> d=new Stack();
+        d.push((long) (num.charAt(0)-'0'));
         for(int i=0;i<ops.length();i++){
             char c=ops.charAt(i);
             if(c=='@'){
-                int last=d.pop();
+                long last=d.pop();
                 if(last==0)
                     return false;
                 int next=num.charAt(i+1)-'0';
                 d.push(last*10+next);
             }else{
                 s.push(c);
-                d.push(num.charAt(i+1)-'0');
+                d.push((long) (num.charAt(i+1)-'0'));
             }
         }
 
         Stack<Character> s1=new Stack<>();
-        Stack<Integer> d1=new Stack<>();
+        Stack<Long> d1=new Stack<>();
         s1.addAll(s);
         d1.addAll(d);
         s.removeAllElements();
@@ -80,8 +80,8 @@ public class S0282H {
         for(int i=0;i<s1.size();i++){
             char c=s1.get(i);
             if(c=='*'){
-                int last=d.pop();
-                int next=d1.get(i+1);
+                long last=d.pop();
+                long next=d1.get(i+1);
                 d.push(last*next);
             }else{
                 s.push(c);
@@ -89,14 +89,26 @@ public class S0282H {
             }
         }
 
+        s1.removeAllElements();
+        d1.removeAllElements();
+        while(!d.isEmpty()){
+            d1.push(d.pop());
+        }
+        while(!s.isEmpty()){
+            s1.push(s.pop());
+        }
+
+        s.addAll(s1);
+        d.addAll(d1);
+
         while(d.size()>1){
-            int next=d.pop();
+            long first=d.pop();
             char c=s.pop();
-            int last=d.pop();
+            long second=d.pop();
             if(c=='+'){
-                d.push(last+next);
+                d.push(first+second);
             }else{
-                d.push(last-next);
+                d.push(first-second);
             }
         }
         return d.pop()==target;
