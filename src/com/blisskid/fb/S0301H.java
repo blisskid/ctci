@@ -3,7 +3,7 @@ import java.util.*;
 public class S0301H {
     public static void main(String[] args) {
         S0301H s=new S0301H();
-        System.out.println(s.removeInvalidParentheses(")o(v("));
+        System.out.println(s.removeInvalidParentheses("())(((()m)("));
     }
     LinkedList<Integer> track=new LinkedList();
     LinkedList<Integer> choices=new LinkedList();
@@ -40,7 +40,8 @@ public class S0301H {
             for(int i=leftP;i<=rightP;i++){
                 sb.append(s.charAt(i));
             }
-            for(int i=rightP+1;i<s.length();i++){
+            int temp=leftP<rightP?rightP:leftP-1;
+            for(int i=temp+1;i<s.length();i++){
                 if(s.charAt(i)!='('){
                     sb.append(s.charAt(i));
                 }
