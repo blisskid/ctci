@@ -1,11 +1,53 @@
 package com.blisskid.fb;
 import java.util.*;
 public class S0301H {
+    public static void main(String[] args) {
+        S0301H s=new S0301H();
+        System.out.println(s.removeInvalidParentheses(")o(v("));
+    }
     LinkedList<Integer> track=new LinkedList();
     LinkedList<Integer> choices=new LinkedList();
     LinkedList<String> res=new LinkedList();
 
     public List<String> removeInvalidParentheses(String s) {
+        StringBuilder sb=new StringBuilder();
+        /*
+        int index=0;
+        char[] sArr=s.toCharArray();
+        while(sArr[index]!='('){
+            if(sArr[index]!=')'){
+                sb.append(sArr[index]);
+            }
+            index++;
+        }
+
+        index=s.length()-1;
+        while(sArr[index]!=')'){
+            if(sArr[index]!='('){
+                sb.append(sArr[index]);
+            }
+            index--;
+        }
+        */
+        int leftP=s.indexOf('(');
+        int rightP=s.lastIndexOf(')');
+        if(leftP!=-1&&rightP!=-1){
+            for(int i=0;i<leftP;i++){
+                if(s.charAt(i)!=')'){
+                    sb.append(s.charAt(i));
+                }
+            }
+            for(int i=leftP;i<=rightP;i++){
+                sb.append(s.charAt(i));
+            }
+            for(int i=rightP+1;i<s.length();i++){
+                if(s.charAt(i)!='('){
+                    sb.append(s.charAt(i));
+                }
+            }
+            s=sb.toString();
+        }
+
         //count '('
         int leftNum=0,rightNum=0;
         for(int i=0;i<s.length();i++){
@@ -59,23 +101,30 @@ public class S0301H {
                 stack.push(s.charAt(i));
             }
         }
-        if(stack.empty()){
-            return true;
-        }else{
-            return false;
+        for(int i=0;i<stack.size();i++){
+            if(stack.get(i)=='('||stack.get(i)==')'){
+                return false;
+            }
         }
+        return true;
     }
 
     private void f(int dis,String s){
         if(track.size()==dis){
             StringBuilder sb=new StringBuilder();
-            for(int i=0;i<s.length();i++){
-                if(!track.contains(s.charAt(i))){
-                    sb.append(s.charAt(i));
+            if(dis>0){
+                for(int i=0;i<s.length();i++){
+                    if(!track.contains(i)){
+                        sb.append(s.charAt(i));
+                    }
                 }
+            }else{
+                sb.append(s);
             }
             if(check(sb.toString())){
-                res.add(sb.toString());
+                if(!res.contains(sb.toString())){
+                    res.add(sb.toString());
+                }
             }
             return;
         }
@@ -84,9 +133,9 @@ public class S0301H {
             int index=choices.get(i);
             if(!track.contains(index)){
                 track.add(choices.get(i));
+                f(dis,s);
+                track.removeLast();
             }
-            f(dis,s);
-            track.removeLast();
         }
     }
 }
