@@ -18,12 +18,17 @@
  */
 
 package com.blisskid.fb;
-import java.util.*;
-public class S0301H {
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+
+public class S0301B {
     public static void main(String[] args) {
-        S0301H s=new S0301H();
-        System.out.println(s.removeInvalidParentheses(")o(v("));
+        S0301B s=new S0301B();
+        System.out.println(s.removeInvalidParentheses("())(((()m)("));
     }
+
     int index=0;
     private List<String> res=new LinkedList();
     public List<String> removeInvalidParentheses(String s) {
