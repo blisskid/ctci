@@ -22,7 +22,7 @@ import java.util.*;
 public class S0301H {
     public static void main(String[] args) {
         S0301H s=new S0301H();
-        System.out.println(s.removeInvalidParentheses(")o(v("));
+        System.out.println(s.removeInvalidParentheses("())(((()m)("));
     }
     int index=0;
     private List<String> res=new LinkedList();
