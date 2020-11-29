@@ -10,7 +10,7 @@ public class S0301H {
     LinkedList<String> res=new LinkedList();
 
     public List<String> removeInvalidParentheses(String s) {
-        StringBuilder sb=new StringBuilder();
+
         /*
         int index=0;
         char[] sArr=s.toCharArray();
@@ -29,6 +29,7 @@ public class S0301H {
             index--;
         }
         */
+        StringBuilder sb=new StringBuilder();
         int leftP=s.indexOf('(');
         int rightP=s.lastIndexOf(')');
         if(leftP!=-1&&rightP!=-1){
