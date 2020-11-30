@@ -81,14 +81,34 @@ public class S0301B {
         }
 //        if(index>0&&s[index]!=s[index-1]&&(s[index]=='('||s[index]==')')){
         if(s[index]=='('||s[index]==')'){
-            StringBuilder track1=new StringBuilder(track);
-            track1.append(s[index]);
-            index++;
-            f(s,track1,index);
-            track1.deleteCharAt(track1.length()-1);
-            StringBuilder track2=new StringBuilder(track);
-            f(s,track2,index);
-            index--;
+            if(s[index]=='('){
+                while(index+1<s.length&&s[index+1]=='('){
+                    track.append(s[index]);
+                    index++;
+                }
+//                StringBuilder track1=new StringBuilder(track);
+                track.append(s[index]);
+                index++;
+                f(s,track,index);
+                track.deleteCharAt(track.length()-1);
+                StringBuilder track2=new StringBuilder(track);
+                f(s,track2,index);
+                index--;
+            }else{
+                while(index+1<s.length&&s[index+1]==')'){
+                    track.append(s[index]);
+                    index++;
+                }
+//                StringBuilder track1=new StringBuilder(track);
+                track.append(s[index]);
+                index++;
+                f(s,track,index);
+                track.deleteCharAt(track.length()-1);
+                StringBuilder track2=new StringBuilder(track);
+                f(s,track2,index);
+                index--;
+            }
+
         }else{
             StringBuilder track1=new StringBuilder(track);
             track1.append(s[index]);
