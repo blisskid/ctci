@@ -22,7 +22,7 @@ import java.util.*;
 public class S0301H {
     public static void main(String[] args) {
         S0301H s=new S0301H();
-        System.out.println(s.removeInvalidParentheses("())(((()m)("));
+        System.out.println(s.removeInvalidParentheses("())))"));
     }
     int index=0;
     private List<String> res=new LinkedList();
@@ -76,6 +76,7 @@ public class S0301H {
         }
 //        if(index>0&&s[index]!=s[index-1]&&(s[index]=='('||s[index]==')')){
         if(s[index]=='('||s[index]==')'){
+            /*
             StringBuilder track1=new StringBuilder(track);
             track1.append(s[index]);
             index++;
@@ -84,6 +85,40 @@ public class S0301H {
             StringBuilder track2=new StringBuilder(track);
             f(s,track2,index);
             index--;
+            */
+            if(s[index]=='('){
+                int count=0;
+                while(index+1<s.length&&s[index+1]=='('){
+                    track.append(s[index]);
+                    index++;
+                    count++;
+                }
+                StringBuilder track1=new StringBuilder(track);
+                track1.append(s[index]);
+                index++;
+                count++;
+                f(s,track1,index);
+                track1.deleteCharAt(track1.length()-1);
+                StringBuilder track2=new StringBuilder(track);
+                f(s,track2,index);
+                index=index-count;
+            }else{
+                int count=0;
+                while(index+1<s.length&&s[index+1]==')'){
+                    track.append(s[index]);
+                    index++;
+                    count++;
+                }
+                StringBuilder track1=new StringBuilder(track);
+                track1.append(s[index]);
+                index++;
+                count++;
+                f(s,track1,index);
+                track1.deleteCharAt(track1.length()-1);
+                StringBuilder track2=new StringBuilder(track);
+                f(s,track2,index);
+                index=index-count;
+            }
         }else{
             StringBuilder track1=new StringBuilder(track);
             track1.append(s[index]);
