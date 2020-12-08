@@ -7,72 +7,37 @@ public class S0416M {
         int[] nums=new int[]{1,2,3};
         System.out.println(new S0416M().canPartition(nums));
     }
-
-    LinkedList<Integer> track1=new LinkedList();
-    LinkedList<Integer> track2=new LinkedList();
-    LinkedList<Integer> choices=new LinkedList();
-
-    boolean res=false;
-    int len=0;
     public boolean canPartition(int[] nums) {
-        if(nums.length==0)
-            return false;
+        int sum=0;
         for(int i=0;i<nums.length;i++){
-            choices.add(nums[i]);
+            sum+=nums[i];
         }
-        f();
-        return res;
-    }
-
-    private void f(){
-        if(choices.isEmpty()){
-            System.out.println("track1:"+track1);
-            System.out.println("track2:"+track2);
-            if(check()==0){
-                res=true;
-            }
-            //track1.clear();
-            //track2.clear();
-            return;
-        }
-        Integer temp=choices.removeFirst();
-        if(track2.size()>0||track1.size()>0){
-            if(check()<0){
-                track1.add(temp);
-                f();
-                track1.removeLast();
-            }else if(check()>0){
-                track2.add(temp);
-                f();
-                track2.removeLast();
-            }
+        if(sum%2!=0){
+            return false;
         }else{
-            track1.add(temp);
-            f();
-            track1.removeLast();
-            track2.add(temp);
-            f();
-            track2.removeLast();
+            return f(nums,sum/2);
         }
-
-        /*
-        track1.add(temp);
-        f();
-        track2.add(track1.removeLast());
-        f();
-        track2.removeLast();
-        */
-        choices.addFirst(temp);
     }
 
-    private int check(){
-        int sum1=0,sum2=0;
-        for(Integer i:track1){
-            sum1+=i;
+    private boolean f(int[] nums,int sum){
+        boolean[][] s=new boolean[nums.length+1][sum+1];
+        s[0][0]=true;
+        for(int i=1;i<=nums.length;i++){
+            s[i][0]=false;
         }
-        for(Integer i:track2){
-            sum2+=i;
+        for(int i=1;i<=sum;i++){
+            s[0][i]=false;
         }
-        return sum1-sum2;
+        for(int i=1;i<=nums.length;i++){
+            for(int j=1;j<=sum;j++){
+                if(j<nums[i-1]){
+                    s[i][j]=s[i-1][j];
+                }else{
+                    s[i][j]=s[i-1][j-nums[i-1]]||s[i-1][j];
+                }
+
+            }
+        }
+        return s[nums.length][sum];
     }
 }
