@@ -42,8 +42,8 @@ public class S0139M {
             System.out.println(track);
             return;
         }
-        //List<String> l=new ArrayList();
-        //l.addAll(choices);
+        //List<String> l=newl.addAll(choices); ArrayList();
+        //
         String str=choices.removeFirst();
         track.add(str);
         f1();
